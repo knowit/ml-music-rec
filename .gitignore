@@ -1,0 +1,9 @@
+
+.idea/
+__pycache__/
+secrets.py
+fiddle.py
+.DS_Store
+
+*/*.pyc
+*.pyc
