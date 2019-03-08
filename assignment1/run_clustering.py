@@ -9,7 +9,7 @@ from helper_functions import pre_processing
 
 
 import numpy as np
-from clustering import dbscan, agglomerative, k_means
+from assignment1 import dbscan, agglomerative, k_means
 from sklearn.decomposition import PCA
 from sklearn.preprocessing import StandardScaler
 

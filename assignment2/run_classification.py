@@ -65,27 +65,28 @@ def train_nn(save_model=False):
     ### TRAINING ###
     # Create model
 
+    # TODO: Here you can modify the architecture of the neural network model and experiment with different parameters
     model = Sequential()
-    model.add(Dense(20,  # Number of hidden layer neurons
+    model.add(Dense(1,  # TODO: Number of hidden layer neurons
                     input_dim=len(get_features()),
                     activation='relu'))
-    # model.add(Dropout(0.5))
-    model.add(Dense(1, activation='sigmoid'))  # Output layer
 
-    early_stopping = EarlyStopping(monitor='val_loss',
-                                   patience=2)
+    # TODO: Possible to add additional neural network layers here
+    # TODO: Use model.add(Dense(number of hidden layer neurons, activation='relu'))
+    model.add(Dense(1, activation='sigmoid'))  # Output layer
 
     model.compile(loss='binary_crossentropy',
                   optimizer='adam',
                   metrics=['accuracy'])
 
+    # TODO: Optional; add early stopping as callback
     history = model.fit(x=x_train,
                         y=y_train,
                         validation_data=[x_val, y_val],
                         batch_size=50,  # Number of data samples to run through network before parameter update
-                        epochs=150,  # Number of times to run entire training set through network
+                        epochs=1,  # TODO: Number of times to run entire training set through network
                         shuffle=True,
-                        callbacks=[early_stopping]
+                        callbacks=[]
                         ).history
 
     score = model.evaluate(x_test, y_test, batch_size=50)  # Evaluate model on test set
@@ -137,11 +138,16 @@ def music_recommendation_nn(model_path='./models/nn_model.h5'):
 
 
 def train_svm():
-    clf = svm.SVC(probability=True)
-    clf.fit(x_train, y_train)
+    # TODO: Instantiate SVM object using Sklearn framework
+    clf = None
 
-    val_score = clf.score(x_val, y_val)
-    test_score = clf.score(x_test, y_test)
+    # TODO: Train SVM by calling fit() and passing training set + labels ass arguments
+
+    # TODO: Output accuracy on validation set by calling score() and passing validation set + label as arguments
+    val_score = ""
+
+    # TODO: Output accuracy on validation set by calling score() and passing validation set + label as arguments
+    test_score = ""
 
     print('Validation accuracy of SVM: ' + str(val_score))
     print('Test accuracy of SVM: ' + str(test_score))
@@ -190,8 +196,12 @@ def music_recommendation_svm():
     print("")
 
 
+# TODO: Comment in appropriate methods for training neural network/svm
+
+# Neural network
 train_nn(save_model=True)
 music_recommendation_nn()
-#
+
+# SVM
 # train_svm()
 # music_recommendation_svm()
