@@ -86,7 +86,6 @@ def run():
         elif v == 'danceability':
             funness += averages[i] * 100
 
-    print(
-        "Your funness score is %f. Compare it to the people around you. The higher the score, the more fun your music is!" % funness)
+    print("Your funness score is %f. Compare it to the people around you. The higher the score, the more fun your music is!" % funness)
 
 run()
