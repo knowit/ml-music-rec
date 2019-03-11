@@ -71,4 +71,22 @@ def run():
     # Plot the standard deviation data
     plot(standard_deviation, tot_features, False)
 
+    # Calculate "funness" of your songs
+    funness = 0
+    for i, v in enumerate(tot_features):
+        if v == 'loudness':
+            funness += averages[i]
+
+        elif v == 'tempo':
+            funness += averages[i]
+
+        elif v == 'energy':
+            funness += averages[i] * 100
+
+        elif v == 'danceability':
+            funness += averages[i] * 100
+
+    print(
+        "Your funness score is %f. Compare it to the people around you. The higher the score, the more fun your music is!" % funness)
+
 run()
