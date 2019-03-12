@@ -1,7 +1,7 @@
 # Music Recommendations Using Machine Learning
 
 ## Initial setup
-1. Install Python 3.6
+1. Install Python 3.6. Preferably not 3.7. There could be some compatability issues if you use 3.7.
 2. Execute `pip install -r requirements.txt` to install
 required Python packages. **Optional**: Use virtualenv to create a project-specific environment for the packages: https://virtualenv.pypa.io/en/stable/.
 This is recommended to keep package dependencies local to the project instead of being global on your machine.
