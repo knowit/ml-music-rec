@@ -198,10 +198,10 @@ def music_recommendation_svm():
 
 # TODO: Comment in appropriate methods for training neural network/svm
 
-# Neural network
-train_nn(save_model=True)
-music_recommendation_nn()
-
 # SVM
 # train_svm()
 # music_recommendation_svm()
+
+# Neural network
+# train_nn(save_model=True)
+# music_recommendation_nn()

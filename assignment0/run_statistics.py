@@ -88,4 +88,5 @@ def run():
 
     print("Your funness score is %f. Compare it to the people around you. The higher the score, the more fun your music is!" % funness)
 
+
 run()

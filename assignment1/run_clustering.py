@@ -95,12 +95,12 @@ def main():
                       X_songname=X_songname, X_artist=X_artist)
 
     # # Run KMeans clustering
-    # run_kmeans(X_data=X_data, reduced_data=reduced_data,
-    #            X_songname=X_songname, X_artist=X_artist)
+    run_kmeans(X_data=X_data, reduced_data=reduced_data,
+               X_songname=X_songname, X_artist=X_artist)
 
     # Run DBSCAN clustering
-    # run_dbscan(X_data=X_data, reduced_data=reduced_data,
-    #            X_songname=X_songname, X_artist=X_artist)
+    run_dbscan(X_data=X_data, reduced_data=reduced_data,
+               X_songname=X_songname, X_artist=X_artist)
 
 
 
