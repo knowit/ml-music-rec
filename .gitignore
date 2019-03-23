@@ -5,8 +5,5 @@ secrets.py
 fiddle.py
 .DS_Store
 
-assignment2/models/*
-!assignment2/models/.gitkeep
-
 */*.pyc
 *.pyc

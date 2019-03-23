@@ -110,7 +110,7 @@ likeable_songs = load_songs_from_playlists([
     # DIR_PLAYLIST_FEATURES + "Jazz/Women of Jazz.pkl",
     # DIR_PLAYLIST_FEATURES + "Jazz/Jazz Classics.pkl",
     # DIR_PLAYLIST_FEATURES + "Jazz/Jazz Classics.pkl",
-    # DIR_PLAYLIST_FEATURES + "annoying_songs.pkl"
+    # DIR_PLAYLIST_FEATURES + "likeable_songs.pkl"
 ])
 
 # Bad songs
@@ -220,5 +220,5 @@ annoying_songs = load_songs_from_playlists([
     # DIR_PLAYLIST_FEATURES + "Jazz/Coffee Table Jazz.pkl",
     # DIR_PLAYLIST_FEATURES + "Jazz/Women of Jazz.pkl",
     # DIR_PLAYLIST_FEATURES + "Jazz/Jazz Classics.pkl",
-    # DIR_PLAYLIST_FEATURES + "likeable_songs.pkl"
+    # DIR_PLAYLIST_FEATURES + "annoying_songs.pkl"
 ])

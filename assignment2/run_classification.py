@@ -94,13 +94,13 @@ def train_nn(save_model=False):
     print('Test accuracy:%f' % (score[1]))
 
     if save_model:
-        model.save('./models/nn_model.h5')
+        model.save('./nn_model.h5')
         print("Model saved")
 
     plot_training_history(history)
 
 
-def music_recommendation_nn(model_path='./models/nn_model.h5'):
+def music_recommendation_nn(model_path='./nn_model.h5'):
     model = load_model(model_path)
     world_songs = load_pickle('../playlist_features/Mega List/world_songs.pkl')
 
@@ -152,7 +152,7 @@ def train_svm():
     print('Validation accuracy of SVM: ' + str(val_score))
     print('Test accuracy of SVM: ' + str(test_score))
 
-    filehandler = open('./models/svm_model.pkl', 'wb')
+    filehandler = open('./svm_model.pkl', 'wb')
     pickle.dump(clf, filehandler)
 
 
@@ -166,7 +166,7 @@ def music_recommendation_svm():
     training_set = x_likeable + x_annoying
     world_songs_without_duplicates = remove_training_set_tracks(training_set, world_songs_without_duplicates)
 
-    filehandler = open('./models/svm_model.pkl', 'rb')
+    filehandler = open('./svm_model.pkl', 'rb')
     clf = pickle.load(filehandler)
 
     all_data = StandardScaler().fit_transform(np.array(filter_features(world_songs_without_duplicates)))
